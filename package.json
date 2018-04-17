@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "istanbul cover _mocha",
+    "start": "NODE_ENV=production pm2 start index.js --name 'myblog'"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +31,7 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
+    "istanbul": "^0.4.5",
     "mocha": "^5.1.0",
     "supertest": "^3.0.0"
   }
